@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1034.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="299.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="397.0" minHeight="10.0" prefHeight="314.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane>
+         <children>
+            <Label layoutX="141.0" layoutY="29.0" text="Buy product">
+               <rotationAxis>
+                  <Point3D x="50.0" z="1.0" />
+               </rotationAxis>
+            </Label>
+            <TextField fx:id="amountBuyProduct" layoutX="99.0" layoutY="93.0" promptText="Amount" />
+            <ChoiceBox fx:id="buyListProducts" layoutX="98.0" layoutY="56.0" prefWidth="150.0" />
+            <Button fx:id="buyProductButton" layoutX="146.0" layoutY="152.0" mnemonicParsing="false" onAction="#buyProduct" text="Submit" />
+         </children>
+      </AnchorPane>
+      <AnchorPane GridPane.columnIndex="1">
+         <children>
+            <Label layoutX="140.0" layoutY="29.0" text="Sell product">
+               <rotationAxis>
+                  <Point3D x="50.0" z="1.0" />
+               </rotationAxis>
+            </Label>
+            <TextField fx:id="amountSellProduct" layoutX="98.0" layoutY="93.0" promptText="Amount" />
+            <ChoiceBox fx:id="sellListProducts" layoutX="98.0" layoutY="56.0" prefWidth="150.0" />
+            <Button layoutX="146.0" layoutY="152.0" mnemonicParsing="false" onAction="#sellProduct" text="Submit" />
+         </children>
+      </AnchorPane>
+      <AnchorPane GridPane.columnIndex="2">
+         <children>
+            <TextField fx:id="depositAmount" layoutX="25.0" layoutY="80.0" promptText="Amount" />
+            <TextField fx:id="withdrawAmount" layoutX="25.0" layoutY="125.0" promptText="Amount" />
+            <Button layoutX="234.0" layoutY="125.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#withdraw" prefHeight="26.0" prefWidth="67.0" text="Withdraw" />
+            <Button layoutX="234.0" layoutY="80.0" mnemonicParsing="false" onAction="#deposit" prefHeight="26.0" prefWidth="67.0" text="Deposit" />
+            <Label layoutX="25.0" layoutY="43.0" text="Balance" />
+            <Label fx:id="balanceLabel" layoutX="234.0" layoutY="43.0" prefHeight="18.0" prefWidth="67.0" text="NA" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="329.0" prefWidth="344.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Label layoutX="267.0" layoutY="32.0" text="Amount" />
+            <Label layoutX="22.0" layoutY="32.0" text="Product" />
+            <Label layoutX="151.0" layoutY="14.0" text="Storage" />
+            <GridPane fx:id="menuGrid" layoutY="49.0" prefHeight="266.0" prefWidth="344.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                   <GridPane.margin>
+                       <Insets left="20.0" />
+                   </GridPane.margin></Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin></Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                   <GridPane.margin>
+                       <Insets left="20.0" />
+                   </GridPane.margin></Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin></Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                         <Insets left="20.0" />
+                     </GridPane.margin></Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                  <GridPane.margin>
+                      <Insets left="20.0" />
+                  </GridPane.margin></Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                   <GridPane.margin>
+                       <Insets left="20.0" />
+                   </GridPane.margin></Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin></Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="8">
+                    <GridPane.margin>
+                    <Insets left="20.0" />
+                    </GridPane.margin></Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="9">
+                    <GridPane.margin>
+                    <Insets left="20.0" />
+                    </GridPane.margin></Label>
+                  <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+                  <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                  <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                  <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                  <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                  <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                  <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                  <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                  <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+                   <Label GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane GridPane.rowIndex="1">
+         <children>
+            <Label layoutX="130.0" layoutY="14.0" prefHeight="55.0" prefWidth="85.0" text="Add product">
+               <rotationAxis>
+                  <Point3D x="50.0" z="1.0" />
+               </rotationAxis>
+            </Label>
+            <TextField fx:id="inputProductName" layoutX="94.0" layoutY="69.0" promptText="Name" />
+            <Button layoutX="146.0" layoutY="235.0" mnemonicParsing="false" onAction="#addProduct" text="Submit" />
+            <TextField fx:id="inputBuyPrice" layoutX="94.0" layoutY="95.0" promptText="Buy price" />
+            <TextField fx:id="inputSellPrice" layoutX="94.0" layoutY="121.0" promptText="Sell price" />
+            <RadioButton fx:id="setTypeDessert" layoutX="94.0" layoutY="193.0" mnemonicParsing="false" onAction="#setWPPInvisible" text="Dessert" />
+            <RadioButton fx:id="setTypeDrink" layoutX="190.0" layoutY="193.0" mnemonicParsing="false" onAction="#setWPPVisible" text="Drink" />
+            <TextField fx:id="inputWeightPerPortion" layoutX="94.0" layoutY="147.0" promptText="Weight/portion" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label layoutX="135.0" layoutY="35.0" text="Remove product" />
+            <ChoiceBox fx:id="removeProductsList" layoutX="98.0" layoutY="78.0" prefWidth="150.0" />
+            <Button fx:id="removeProductButton" layoutX="147.0" layoutY="169.0" mnemonicParsing="false" text="Submit" />
+            <Button fx:id="saveButton" layoutX="131.0" layoutY="262.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="90.0" text="Save" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
